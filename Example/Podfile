@@ -1,0 +1,12 @@
+use_frameworks!
+platform :ios, '10.0'
+
+target 'VSTwitterTextCounter_Example' do
+  pod 'VSTwitterTextCounter', :path => '../'
+
+  target 'VSTwitterTextCounter_Tests' do
+    inherit! :search_paths
+
+
+  end
+end

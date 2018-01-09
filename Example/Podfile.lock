@@ -1,0 +1,16 @@
+PODS:
+  - VSTwitterTextCounter (0.1.0)
+
+DEPENDENCIES:
+  - VSTwitterTextCounter (from `../`)
+
+EXTERNAL SOURCES:
+  VSTwitterTextCounter:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VSTwitterTextCounter: 0a647c15f256a10011bbbd4b626fc2f5fc2e792e
+
+PODFILE CHECKSUM: 614e557836642184f62a4b9c504e1fc4d815b8ce
+
+COCOAPODS: 1.3.1

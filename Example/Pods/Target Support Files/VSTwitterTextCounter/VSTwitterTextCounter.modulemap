@@ -1,0 +1,6 @@
+framework module VSTwitterTextCounter {
+  umbrella header "VSTwitterTextCounter-umbrella.h"
+
+  export *
+  module * { export * }
+}
