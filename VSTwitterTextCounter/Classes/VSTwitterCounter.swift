@@ -1,6 +1,6 @@
 //
 //  VSTwitterTextCounter.swift
-//  VoiceStorm
+//  VSTwitterTextCounter
 //
 //  Created by Shady Elyaski on 12/22/17.
 //  Copyright © 2018 Dynamic Signal. All rights reserved.
@@ -11,7 +11,7 @@ import UIKit
 /**
  Lists down all different states of VSTwitterTextCounter
  */
-enum VSTwitterCounterState: Int
+public enum VSTwitterTextCounterState: Int
 {
     case Ok
     case Warning
@@ -22,9 +22,9 @@ enum VSTwitterCounterState: Int
 
 /**
  VSTwitterTextCounter is a custom UIControl that tries to imitate the new Twitter's tweet text counter progress-based UI.
- It follows the standard that is defined in: https://github.com/twitter/twitter-text
+ It follows the standard that is defined in: https://developer.twitter.com/en/docs/developer-utilities/twitter-text
  */
-class VSTwitterTextCounter: UIControl
+public class VSTwitterTextCounter: UIControl
 {
     /**
      This enum is responsible for all the conversion methods needed by **VSTwitterTextCounter**
@@ -87,8 +87,11 @@ class VSTwitterTextCounter: UIControl
     /**
      Control's fixed size
      */
-    private static let CONTROL_SIZE: CGSize = CGSize(width: CIRCLE_RADIUS * 4,
-                                                     height: CIRCLE_RADIUS * 2)
+    private static let CONTROL_SIZE: CGSize = CGSize(width: (CIRCLE_RADIUS +
+                                                             Conversion.max(VSTwitterTextCounter.INNER_STROKE_WIDTH, VSTwitterTextCounter.OUTTER_STROKE_WIDTH)) * 10,
+                                                     height: (CIRCLE_RADIUS +
+                                                              Conversion.max(VSTwitterTextCounter.INNER_STROKE_WIDTH, VSTwitterTextCounter.OUTTER_STROKE_WIDTH)) * 2)
+
     /**
      Counter text's font
      */
@@ -125,6 +128,11 @@ class VSTwitterTextCounter: UIControl
     private static let OVERFLOWING_NUMBER_COLOR = #colorLiteral(red: 0.8784313725, green: 0.1411764706, blue: 0.368627451, alpha: 1)
     
     /**
+     Overflowing text's background color
+     */
+    private static let OVERFLOWING_TEXT_BACKGROUND = #colorLiteral(red: 1, green: 0.7215686275, blue: 0.7607843137, alpha: 1)
+    
+    /**
      Default counter's background color
      */
     private static let DEFAULT_BACKGROUND_COLOR = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
@@ -136,7 +144,7 @@ class VSTwitterTextCounter: UIControl
     /**
      Max Twitter text count supported
      */
-    @IBInspectable var maxCount: Int = DEFAULT_MAX_COUNT
+    @IBInspectable open var maxCount: Int = DEFAULT_MAX_COUNT
     {
         didSet
         {
@@ -146,8 +154,9 @@ class VSTwitterTextCounter: UIControl
     
     /**
      Current Twitter weighted length
+     Please use [Twitter's library](https://github.com/twitter/twitter-text/tree/master/objc) to correctly calculate weighted length of a string
      */
-    @IBInspectable var weightedLength: Int = 0
+    @IBInspectable open var weightedLength: Int = 0
     {
         didSet
         {
@@ -162,7 +171,7 @@ class VSTwitterTextCounter: UIControl
     /**
      Current Twitter Counter state (Readonly)
      */
-    var counterState: VSTwitterCounterState
+    open var counterState: VSTwitterTextCounterState
     {
         if weightedLength >= maxCount
         {
@@ -187,32 +196,69 @@ class VSTwitterTextCounter: UIControl
      
      - returns: Size for counter's content
      */
-    override var intrinsicContentSize: CGSize
+    override public var intrinsicContentSize: CGSize
     {
-        return CGSize(width: UIViewNoIntrinsicMetric, height: VSTwitterTextCounter.CONTROL_SIZE.height)
+        return VSTwitterTextCounter.CONTROL_SIZE
     }
     
     //--------------------------
     
     // MARK: - Initialization & Life Cycle
     
+    /**
+     Initializes **VSTwitterTextCounter** with a new max character count
+     NB. Control size is defaulted to *VSTwitterTextCounter.CONTROL_SIZE*
+     */
     public convenience init(withMaxCount maxCount: Int)
     {
-        self.init(frame: CGRect.zero)
+        let frame = CGRect(x: 0, y: 0, width: VSTwitterTextCounter.CONTROL_SIZE.width, height: VSTwitterTextCounter.CONTROL_SIZE.height)
+        
+        self.init(frame: frame)
         
         self.maxCount = maxCount
     }
     
-    override init(frame: CGRect)
+    /**
+     Initializes **VSTwitterTextCounter** with a start point
+     NB. Control size is defaulted to *VSTwitterTextCounter.CONTROL_SIZE*
+     */
+    public convenience init(point: CGPoint)
     {
-        super.init(frame: frame)
+        let frame = CGRect(x: point.x, y: point.y, width: VSTwitterTextCounter.CONTROL_SIZE.width, height: VSTwitterTextCounter.CONTROL_SIZE.height)
+        
+        self.init(frame: frame)
+    }
+    
+    /**
+     Initializes **VSTwitterTextCounter**
+     NB. Control size is defaulted to *VSTwitterTextCounter.CONTROL_SIZE*
+     */
+    public convenience init()
+    {
+        let point = CGPoint(x: 0, y: 0)
+        
+        self.init(point: point)
+    }
+    
+    /**
+     Initializes **VSTwitterTextCounter** with a frame
+     NB. Control size is defaulted to *VSTwitterTextCounter.CONTROL_SIZE*
+     */
+    override public init(frame: CGRect)
+    {
+        let newFrame = CGRect(x: frame.origin.x, y: frame.origin.y, width: VSTwitterTextCounter.CONTROL_SIZE.width, height: VSTwitterTextCounter.CONTROL_SIZE.height)
+        
+        super.init(frame: newFrame)
         
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
+    required public init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
+        
+        // Force frame size
+        self.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: VSTwitterTextCounter.CONTROL_SIZE.width, height: VSTwitterTextCounter.CONTROL_SIZE.height)
         
         setup()
     }
@@ -222,13 +268,13 @@ class VSTwitterTextCounter: UIControl
         backgroundColor = VSTwitterTextCounter.DEFAULT_BACKGROUND_COLOR
     }
     
-    override func awakeFromNib()
+    override public func awakeFromNib()
     {
         super.awakeFromNib()
         
     }
     
-    override func draw(_ rect: CGRect)
+    override public func draw(_ rect: CGRect)
     {
         // Drawing code
         if let ctx = UIGraphicsGetCurrentContext()
@@ -243,6 +289,8 @@ class VSTwitterTextCounter: UIControl
             let width = self.bounds.size.width
             let height = self.bounds.size.height
             
+            // Draw the main background circle
+            
             let circle_center_point = CGPoint(x: width - VSTwitterTextCounter.CIRCLE_RADIUS - Conversion.max(VSTwitterTextCounter.INNER_STROKE_WIDTH, VSTwitterTextCounter.OUTTER_STROKE_WIDTH), y: height / 2.0)
             
             var path = UIBezierPath()
@@ -255,10 +303,10 @@ class VSTwitterTextCounter: UIControl
             
             ctx.saveGState()
             
+            // Draw the progress circle
+            
             let percent = CGFloat(weightedLength) / CGFloat(maxCount)
-            // swiftlint:disable missing_space_literals
             let startAngle = CGFloat(-90)   // Start drawing from center top
-            // swiftlint:enable missing_space_literals
             let angle = 360 * percent + startAngle
             path = UIBezierPath(arcCenter: circle_center_point, radius: VSTwitterTextCounter.CIRCLE_RADIUS, startAngle: Conversion.degreesToRadians(value: startAngle), endAngle: Conversion.degreesToRadians(value: angle), clockwise: true)
             getCircleColor().setStroke()
@@ -268,6 +316,8 @@ class VSTwitterTextCounter: UIControl
             path.fill()
             
             ctx.restoreGState()
+            
+            // Draw the remaining characters count if needed
             
             let textSize = CGSize(width: circle_center_point.x - VSTwitterTextCounter.CIRCLE_RADIUS - Conversion.max(VSTwitterTextCounter.INNER_STROKE_WIDTH, VSTwitterTextCounter.OUTTER_STROKE_WIDTH) - 8, height: 14)
             let remaining = "\(maxCount - weightedLength)"
@@ -287,8 +337,64 @@ class VSTwitterTextCounter: UIControl
         }
     }
     
+    // MARK: - Public helper methods
+    
+    /**
+     Updates the layout of the TextView's depending on the new weighted length, like showing the overflowing text background.
+     
+     - parameter textView: Reference to the **UITextView** that needs to be updated
+     - parameter textWeightedLength: The text's weighted length as calculated by Twitter's SDK NB. If the weighted length has been passed here, there is no need to pass it in again to the *weightedLength* property
+     */
+    public func update(with textView: UITextView, textWeightedLength: Int? = nil)
+    {
+        if let textWeightedLength = textWeightedLength
+        {
+            weightedLength = textWeightedLength
+        }
+        
+        // Store the current cursor position as a range
+        let preAttributedRange = textView.selectedRange
+        
+        // Highlight any overflowing text
+        if weightedLength > maxCount
+        {
+            let objcString = NSString(string: textView.text)
+            
+            // Find if last allowed index falls between a unicode character
+            var lastAllowedCharacterIndex = maxCount    // Last allowed character index
+            let rangeOfComposedCharacter = objcString.rangeOfComposedCharacterSequence(at: lastAllowedCharacterIndex)
+            if rangeOfComposedCharacter.contains(lastAllowedCharacterIndex)
+            {
+                lastAllowedCharacterIndex = rangeOfComposedCharacter.location
+            }
+            // -------------------------------------------------------------
+            
+            // Split the string using NSString as Swift string counts Unicode characters as one each
+            let okString = objcString.substring(to: lastAllowedCharacterIndex)
+            let overflowingString = objcString.substring(from: lastAllowedCharacterIndex)
+            
+            let attributedString = NSMutableAttributedString(string: okString, attributes: [.font: textView.font!])
+            
+            attributedString.append(NSAttributedString(string: overflowingString, attributes: [.backgroundColor: VSTwitterTextCounter.OVERFLOWING_TEXT_BACKGROUND, .font: textView.font!]))
+            
+            textView.attributedText = attributedString
+        }
+        else    // Reset any kind of formatting
+        {
+            textView.attributedText = NSAttributedString(string: textView.text, attributes: [.font: textView.font!])   // Resets any kind of attributes
+        }
+        
+        // Reapply the range
+        textView.selectedRange = preAttributedRange
+    }
+    
     // MARK: - Private helper methods
     
+    /**
+     Figure out what color should we use to draw the progress circle
+     
+     - returns: UIColor value
+     */
     private func getCircleColor() -> UIColor
     {
         switch counterState
@@ -302,6 +408,11 @@ class VSTwitterTextCounter: UIControl
         }
     }
     
+    /**
+     Figure out what color should we use to draw the number
+     
+     - returns: UIColor value
+     */
     private func getNumberColor() -> UIColor
     {
         switch counterState
@@ -313,6 +424,14 @@ class VSTwitterTextCounter: UIControl
         }
     }
     
+    /**
+     Draw text with the specified attributes
+     
+     - parameter myText: Text needed to be drawn
+     - parameter textColor: Text color
+     - parameter font: Text font
+     - parameter inRect: Drawing rectangle, text will be wrapped inside
+     */
     private func drawMyText(_ myText: String, _ textColor: UIColor, _ font: UIFont, _ inRect: CGRect)
     {
         let paragraphStyle = NSMutableParagraphStyle()
