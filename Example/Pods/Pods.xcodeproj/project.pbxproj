@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EC9876F1F4E1B8F6808D8EEA8CAEAB0 /* VSTwitterTextCounter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E601E064F6AB179D3712D3B402CF18F /* VSTwitterTextCounter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EC9876F1F4E1B8F6808D8EEA8CAEAB0 /* VSTwitterTextCounter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC2A5876E8ED7C25B9148263D585F14 /* VSTwitterTextCounter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69DEDA809B0CD029DB9FEFFE8E743C30 /* Pods-VSTwitterTextCounter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04231466DB02637B50A4697BB12C17F2 /* Pods-VSTwitterTextCounter_Tests-dummy.m */; };
+		7A21147237FABFA478DC3ABC4BE02E76 /* VSTwitterTextCounter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F00F9EDE9692644DBB56B5A47E7785 /* VSTwitterTextCounter-dummy.m */; };
+		82323F998791E8CDC2784DD37CB1C50F /* VSTwitterTextCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8BD934FB73E8099229A5774B7196F5 /* VSTwitterTextCounter.swift */; };
 		87FB14E7E64D8D50BE2DCDA0AED0A0D8 /* Pods-VSTwitterTextCounter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56F7CFE2AB9D7D142196A526CA151925 /* Pods-VSTwitterTextCounter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E22508DC1A7D4D1CEFE63B1B73DA27A /* Pods-VSTwitterTextCounter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0803CA4C374D8E2E8F8D321FAA3DEE1 /* Pods-VSTwitterTextCounter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0DBA7B31AF3AE4AC2822EA88619EFFF /* VSTwitterCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD6DE7990C7A18C642A85EEB7897C0 /* VSTwitterCounter.swift */; };
 		C0E895E8137CD217AF519C086B28CB3B /* Pods-VSTwitterTextCounter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4473C11EC0E3622F04FB3557216FCD0 /* Pods-VSTwitterTextCounter_Example-dummy.m */; };
 		C1A58435DD2922FAAFE08B80C9D4C6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		DD5B3B76E6CB0A5B2266309E76D07E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		EE7B4C2E6FB06B4F9069B265FF8020D5 /* VSTwitterTextCounter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3FE23E0BC2DC15B4293F1A181DCBA3 /* VSTwitterTextCounter-dummy.m */; };
 		FCE6516A221ED45C6F78A7EF6E2E7CD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,32 +31,32 @@
 
 /* Begin PBXFileReference section */
 		04231466DB02637B50A4697BB12C17F2 /* Pods-VSTwitterTextCounter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VSTwitterTextCounter_Tests-dummy.m"; sourceTree = "<group>"; };
-		169D9C227DA2A9AB5E5B661B8474E87A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ADF6EA0C3A0051C290778BEDE4CC55B /* VSTwitterTextCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VSTwitterTextCounter.framework; path = VSTwitterTextCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4FEC51BF6D0BFE44CD84617FB9690C /* Pods-VSTwitterTextCounter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSTwitterTextCounter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		20FF649B0365213E0D44A2D35CABFBFA /* Pods-VSTwitterTextCounter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSTwitterTextCounter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		23441EF209F00666F1375D960C0EE4AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VSTwitterTextCounter.xcconfig; sourceTree = "<group>"; };
 		2DBA74322151E5CF6637F5D850572087 /* Pods-VSTwitterTextCounter_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSTwitterTextCounter_Example-resources.sh"; sourceTree = "<group>"; };
 		313B834F0D42D563500756C495E068B4 /* Pods-VSTwitterTextCounter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSTwitterTextCounter_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4AB5E606BDF9CBB8C7B4F45CA459364A /* VSTwitterTextCounter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VSTwitterTextCounter.xcconfig; sourceTree = "<group>"; };
-		4E601E064F6AB179D3712D3B402CF18F /* VSTwitterTextCounter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSTwitterTextCounter-umbrella.h"; sourceTree = "<group>"; };
+		3CC2A5876E8ED7C25B9148263D585F14 /* VSTwitterTextCounter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSTwitterTextCounter-umbrella.h"; sourceTree = "<group>"; };
 		56F7CFE2AB9D7D142196A526CA151925 /* Pods-VSTwitterTextCounter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VSTwitterTextCounter_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5C3FE23E0BC2DC15B4293F1A181DCBA3 /* VSTwitterTextCounter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VSTwitterTextCounter-dummy.m"; sourceTree = "<group>"; };
+		58CB1875A9529AE63CD77B973F2B8AD2 /* VSTwitterTextCounter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VSTwitterTextCounter.modulemap; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66FDFC5B1FF98A22917D8483931EF671 /* Pods-VSTwitterTextCounter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VSTwitterTextCounter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6DEB56CE39E5D86100A905E662E1E6C5 /* Pods-VSTwitterTextCounter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VSTwitterTextCounter_Example.modulemap"; sourceTree = "<group>"; };
-		7158EF0FAAB891286ED3F79C2FAADAA1 /* VSTwitterTextCounter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VSTwitterTextCounter.modulemap; sourceTree = "<group>"; };
-		91DD6DE7990C7A18C642A85EEB7897C0 /* VSTwitterCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VSTwitterCounter.swift; path = VSTwitterTextCounter/Classes/VSTwitterCounter.swift; sourceTree = "<group>"; };
+		8FA3767ACFF4FC433E4962DD4978DBDB /* VSTwitterTextCounter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSTwitterTextCounter-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4473C11EC0E3622F04FB3557216FCD0 /* Pods-VSTwitterTextCounter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VSTwitterTextCounter_Example-dummy.m"; sourceTree = "<group>"; };
 		AE6D4055ED3B9EB2FC1FFECF034A618A /* Pods-VSTwitterTextCounter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VSTwitterTextCounter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B2EFCBE692825280E79166A9C144AC07 /* Pods-VSTwitterTextCounter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSTwitterTextCounter_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		B54780B60BF94F0D1CA046526A59A17B /* Pods-VSTwitterTextCounter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSTwitterTextCounter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BD630DCFB7A44BE6DE6132E84FE3CAEA /* Pods-VSTwitterTextCounter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VSTwitterTextCounter_Tests.modulemap"; sourceTree = "<group>"; };
+		BE8BD934FB73E8099229A5774B7196F5 /* VSTwitterTextCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VSTwitterTextCounter.swift; path = VSTwitterTextCounter/Classes/VSTwitterTextCounter.swift; sourceTree = "<group>"; };
+		C0F00F9EDE9692644DBB56B5A47E7785 /* VSTwitterTextCounter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VSTwitterTextCounter-dummy.m"; sourceTree = "<group>"; };
 		C1CB6B706A16D25B4D88A91DEC9690D2 /* Pods-VSTwitterTextCounter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VSTwitterTextCounter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C60FA6E51F1B84BD2B33793B58C70469 /* Pods_VSTwitterTextCounter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VSTwitterTextCounter_Tests.framework; path = "Pods-VSTwitterTextCounter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF7486C746BEEC86AF4803205F999B28 /* VSTwitterTextCounter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSTwitterTextCounter-prefix.pch"; sourceTree = "<group>"; };
 		D7B58B39F56F391FE7642B4F8D31EB99 /* Pods-VSTwitterTextCounter_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSTwitterTextCounter_Tests-resources.sh"; sourceTree = "<group>"; };
+		DB9B218C6A940AAC813EBEDB970F3EE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55CAF5A23150891E1AEB48BF4797658 /* Pods-VSTwitterTextCounter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSTwitterTextCounter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FF66AC179E14067B5CD72E00271291 /* Pods-VSTwitterTextCounter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VSTwitterTextCounter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		EA9927E35D1CD02C55B2CCD4785FB4DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +110,30 @@
 			path = "Target Support Files/Pods-VSTwitterTextCounter_Tests";
 			sourceTree = "<group>";
 		};
+		1BB1A4D6106707E0D8E19D72DAE68D84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB9B218C6A940AAC813EBEDB970F3EE2 /* Info.plist */,
+				58CB1875A9529AE63CD77B973F2B8AD2 /* VSTwitterTextCounter.modulemap */,
+				249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */,
+				C0F00F9EDE9692644DBB56B5A47E7785 /* VSTwitterTextCounter-dummy.m */,
+				8FA3767ACFF4FC433E4962DD4978DBDB /* VSTwitterTextCounter-prefix.pch */,
+				3CC2A5876E8ED7C25B9148263D585F14 /* VSTwitterTextCounter-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VSTwitterTextCounter";
+			sourceTree = "<group>";
+		};
+		21E78DB75FC777BA532FAE68AE41A634 /* VSTwitterTextCounter */ = {
+			isa = PBXGroup;
+			children = (
+				BE8BD934FB73E8099229A5774B7196F5 /* VSTwitterTextCounter.swift */,
+				1BB1A4D6106707E0D8E19D72DAE68D84 /* Support Files */,
+			);
+			name = VSTwitterTextCounter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		40A198D5F9FA65144897A9F3D1F6103B /* Pods-VSTwitterTextCounter_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,20 +182,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B9E60BA9E6358BB2FB12977850DB3FCA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				169D9C227DA2A9AB5E5B661B8474E87A /* Info.plist */,
-				7158EF0FAAB891286ED3F79C2FAADAA1 /* VSTwitterTextCounter.modulemap */,
-				4AB5E606BDF9CBB8C7B4F45CA459364A /* VSTwitterTextCounter.xcconfig */,
-				5C3FE23E0BC2DC15B4293F1A181DCBA3 /* VSTwitterTextCounter-dummy.m */,
-				CF7486C746BEEC86AF4803205F999B28 /* VSTwitterTextCounter-prefix.pch */,
-				4E601E064F6AB179D3712D3B402CF18F /* VSTwitterTextCounter-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VSTwitterTextCounter";
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,20 +190,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0DC6C336142EA37E1F4CC694BA3416C /* VSTwitterTextCounter */ = {
-			isa = PBXGroup;
-			children = (
-				91DD6DE7990C7A18C642A85EEB7897C0 /* VSTwitterCounter.swift */,
-				B9E60BA9E6358BB2FB12977850DB3FCA /* Support Files */,
-			);
-			name = VSTwitterTextCounter;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		CB7361939F5D0B05838A78A7A1139E32 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0DC6C336142EA37E1F4CC694BA3416C /* VSTwitterTextCounter */,
+				21E78DB75FC777BA532FAE68AE41A634 /* VSTwitterTextCounter */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBCDBB168E8F3ACC16A1AE576624EB6C /* Build configuration list for PBXNativeTarget "VSTwitterTextCounter" */;
 			buildPhases = (
-				4B252C61C49172919455DD7B808165D8 /* Sources */,
+				27DD84DF96A3346FF4E150679C3862BE /* Sources */,
 				FF851BFA04320FD33506AE6B9963A59E /* Frameworks */,
 				5D1B8B062984E0749BD51F7E2CB89593 /* Headers */,
 			);
@@ -317,20 +317,20 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27DD84DF96A3346FF4E150679C3862BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A21147237FABFA478DC3ABC4BE02E76 /* VSTwitterTextCounter-dummy.m in Sources */,
+				82323F998791E8CDC2784DD37CB1C50F /* VSTwitterTextCounter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2885188ABA09F8C55B381119BD33F0DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				69DEDA809B0CD029DB9FEFFE8E743C30 /* Pods-VSTwitterTextCounter_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4B252C61C49172919455DD7B808165D8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0DBA7B31AF3AE4AC2822EA88619EFFF /* VSTwitterCounter.swift in Sources */,
-				EE7B4C2E6FB06B4F9069B265FF8020D5 /* VSTwitterTextCounter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +356,7 @@
 /* Begin XCBuildConfiguration section */
 		31C31A473E673F5CA406C01CFC5EA1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AB5E606BDF9CBB8C7B4F45CA459364A /* VSTwitterTextCounter.xcconfig */;
+			baseConfigurationReference = 249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -447,7 +447,7 @@
 		};
 		945D1535F53E9ACFF09C8A60761E7B94 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AB5E606BDF9CBB8C7B4F45CA459364A /* VSTwitterTextCounter.xcconfig */;
+			baseConfigurationReference = 249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
