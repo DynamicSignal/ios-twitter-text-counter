@@ -354,37 +354,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		31C31A473E673F5CA406C01CFC5EA1B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VSTwitterTextCounter/VSTwitterTextCounter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VSTwitterTextCounter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VSTwitterTextCounter/VSTwitterTextCounter.modulemap";
-				PRODUCT_NAME = VSTwitterTextCounter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,7 +414,7 @@
 			};
 			name = Debug;
 		};
-		945D1535F53E9ACFF09C8A60761E7B94 /* Release */ = {
+		8A75B3657477D34645CAD230AFA7837A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */;
 			buildSettings = {
@@ -468,14 +437,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -665,6 +633,38 @@
 			};
 			name = Release;
 		};
+		E1D9BDD88899E465A116AAC1E430A32A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 249E3577DF71A8D17613ED10D0415CCD /* VSTwitterTextCounter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VSTwitterTextCounter/VSTwitterTextCounter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VSTwitterTextCounter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VSTwitterTextCounter/VSTwitterTextCounter.modulemap";
+				PRODUCT_NAME = VSTwitterTextCounter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -698,8 +698,8 @@
 		EBCDBB168E8F3ACC16A1AE576624EB6C /* Build configuration list for PBXNativeTarget "VSTwitterTextCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31C31A473E673F5CA406C01CFC5EA1B7 /* Debug */,
-				945D1535F53E9ACFF09C8A60761E7B94 /* Release */,
+				8A75B3657477D34645CAD230AFA7837A /* Debug */,
+				E1D9BDD88899E465A116AAC1E430A32A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
