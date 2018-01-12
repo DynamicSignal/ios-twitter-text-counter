@@ -82,11 +82,12 @@ Add a new UIView to your xib, and update its class to __VSTwitterTextCounter__.
 Enjoy ;)
 
 ## Configuration
-### Filter
-| Property        | Effect | Default value |
-|:-------------:|-------------|-----|-----|
-| **Max Count** | Sets the max value for weightedLength  | DEFAULT_MAX_COUNT |
-| **Weighted Length** | Current text weight  | 0 |
+### Counter
+
+| Property            | Effect                                | Default value  |
+| :-----------------: | :------------------------------------ | :------------- |
+| **Max Count**       | Sets the max value for weightedLength | DEFAULT_MAX_COUNT / 280 |
+| **Weighted Length** | Current text weight                   |   0                     |
 
 ## Author
 
