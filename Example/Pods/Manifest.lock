@@ -1,5 +1,5 @@
 PODS:
-  - VSTwitterTextCounter (0.1.0)
+  - VSTwitterTextCounter (0.1.1)
 
 DEPENDENCIES:
   - VSTwitterTextCounter (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  VSTwitterTextCounter: 0a647c15f256a10011bbbd4b626fc2f5fc2e792e
+  VSTwitterTextCounter: 75cada993b08664870fdc068c6c1b6394e13dc40
 
 PODFILE CHECKSUM: 614e557836642184f62a4b9c504e1fc4d815b8ce
 
