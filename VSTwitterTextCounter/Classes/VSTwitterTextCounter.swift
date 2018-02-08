@@ -361,7 +361,7 @@ public class VSTwitterTextCounter: UIControl
             let objcString = NSString(string: textView.text)
             
             // Find if last allowed index falls between a unicode character
-            var lastAllowedCharacterIndex = maxCount    // Last allowed character index
+            var lastAllowedCharacterIndex = objcString.length > maxCount ? maxCount : objcString.length - 1    // Last allowed character index
             let rangeOfComposedCharacter = objcString.rangeOfComposedCharacterSequence(at: lastAllowedCharacterIndex)
             if rangeOfComposedCharacter.contains(lastAllowedCharacterIndex)
             {
