@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		18F15C8D9E9AE17572B11881 /* Pods-VSTwitterTextCounter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSTwitterTextCounter_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3020AF898D247621060D2FA0 /* VSTwitterTextCounter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VSTwitterTextCounter.podspec; path = ../VSTwitterTextCounter.podspec; sourceTree = "<group>"; };
+		3020AF898D247621060D2FA0 /* VSTwitterTextCounter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VSTwitterTextCounter.podspec; path = ../VSTwitterTextCounter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		589DF9B787F4D1C64D262457 /* Pods_VSTwitterTextCounter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSTwitterTextCounter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* VSTwitterTextCounter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSTwitterTextCounter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				82B23D109398BE7D65560819 /* [CP] Embed Pods Frameworks */,
-				2AC78CC172034BDE802BE543 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,8 +189,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				3164E87731F4B5BAF467339E /* [CP] Embed Pods Frameworks */,
-				1E088385A8BCC45E8E0EEACD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,7 +216,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -229,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -264,58 +262,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E088385A8BCC45E8E0EEACD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSTwitterTextCounter_Tests/Pods-VSTwitterTextCounter_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2AC78CC172034BDE802BE543 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3164E87731F4B5BAF467339E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSTwitterTextCounter_Tests/Pods-VSTwitterTextCounter_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		82B23D109398BE7D65560819 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/VSTwitterTextCounter/VSTwitterTextCounter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -324,7 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VSTwitterTextCounter_Example/Pods-VSTwitterTextCounter_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AFAD0EF2DBAB533F4199D82B /* [CP] Check Pods Manifest.lock */ = {
@@ -463,6 +416,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -508,6 +462,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -517,17 +472,19 @@
 			baseConfigurationReference = 79BAC46A871CCB9A19F1E9C0 /* Pods-VSTwitterTextCounter_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/VSTwitterTextCounter\"",
 				);
 				INFOPLIST_FILE = VSTwitterTextCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -536,17 +493,19 @@
 			baseConfigurationReference = 18F15C8D9E9AE17572B11881 /* Pods-VSTwitterTextCounter_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$PODS_CONFIGURATION_BUILD_DIR/VSTwitterTextCounter\"",
 				);
 				INFOPLIST_FILE = VSTwitterTextCounter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -563,8 +522,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -577,8 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -373,15 +373,15 @@ public class VSTwitterTextCounter: UIControl
             let okString = objcString.substring(to: lastAllowedCharacterIndex)
             let overflowingString = objcString.substring(from: lastAllowedCharacterIndex)
             
-            let attributedString = NSMutableAttributedString(string: okString, attributes: [NSFontAttributeName: textView.font!])
+            let attributedString = NSMutableAttributedString(string: okString, attributes: [.font: textView.font!])
             
-            attributedString.append(NSAttributedString(string: overflowingString, attributes: [NSBackgroundColorAttributeName: VSTwitterTextCounter.OVERFLOWING_TEXT_BACKGROUND, NSFontAttributeName: textView.font!]))
+            attributedString.append(NSAttributedString(string: overflowingString, attributes: [.backgroundColor: VSTwitterTextCounter.OVERFLOWING_TEXT_BACKGROUND, .font: textView.font!]))
             
             textView.attributedText = attributedString
         }
         else    // Reset any kind of formatting
         {
-            textView.attributedText = NSAttributedString(string: textView.text, attributes: [NSFontAttributeName: textView.font!])   // Resets any kind of attributes
+            textView.attributedText = NSAttributedString(string: textView.text, attributes: [.font: textView.font!])   // Resets any kind of attributes
         }
         
         // Reapply the range
@@ -438,10 +438,10 @@ public class VSTwitterTextCounter: UIControl
         paragraphStyle.lineBreakMode = .byTruncatingTail
         paragraphStyle.alignment = .right
         
-        let textFontAttributes = [
-            NSFontAttributeName: font,
-            NSForegroundColorAttributeName: textColor,
-            NSParagraphStyleAttributeName: paragraphStyle
+        let textFontAttributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: textColor,
+            .paragraphStyle: paragraphStyle
             ]
         
         let options: NSStringDrawingOptions = [.usesLineFragmentOrigin]
