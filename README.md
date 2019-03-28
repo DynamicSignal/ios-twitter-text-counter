@@ -36,9 +36,16 @@ __Manual__:
 
 2. Start using this new UIControl Subclass!
 
+__Supported Swift Versions__:
+
+| Library Version     | Supported Swift Version |
+| :-----------------: | :---------------------- |
+| **0.1.3 and above** | Swift 5                 |
+| **0.1.2**           | Swift 3                 |
+
 # SDK Support
 
-It supports iOS 8.0 to iOS 11.0
+It supports iOS 8.0 to iOS 12.2
 Live rendering in Interface builder will require Xcode 6.x
 
 # Usage
