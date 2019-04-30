@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name                  = 'VSTwitterTextCounter'
-s.version               = '0.1.3'
+s.version               = '0.1.2.1'
 s.license               = { :type => 'MIT', :file => 'LICENSE' }
 s.platform              = :ios, "8.0"
 s.ios.deployment_target = '8.0'
-s.swift_version         = '5.0'
+s.swift_version         = '4.2'
 s.authors               = { 'Shady Elyaski' => 'shady@elyaski.com' }
 s.screenshots           = 'https://raw.github.com/DynamicSignal/ios-twitter-text-counter/master/Example/Assets/sample.gif'
 s.homepage              = 'https://github.com/DynamicSignal/ios-twitter-text-counter'
